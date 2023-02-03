@@ -98,3 +98,17 @@
 
 # print(f"Alright, so {user_name} said {likes} about liking me and you lives in {lives} ")
 
+
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_whee():
+    print("Whee!")
+
+say_whee()
+
